@@ -1,0 +1,17 @@
+main {
+  a {
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-border);
+    line-height: 1.7rem;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: var(--color-text);
+    }
+
+    &:visited {
+      color: var(--color-text);
+    }
+  }
+
+}
