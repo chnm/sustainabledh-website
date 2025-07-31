@@ -27,6 +27,6 @@ jobs:
       build-artifact-name: "sustainabledh-website"
       release-tag-name-type: "iso"
 
-      hugo-devl-url: "https://sustainabledh.org"
-      hugo-prod-url: "https://sustainabledh.org"
+      website-devl-fqdn: "sustainabledh.org"
+      website-prod-fqdn: "sustainabledh.org"
 
