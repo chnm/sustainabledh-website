@@ -1,0 +1,32 @@
+name: "Build, Release, Deploy"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+    paths:
+      - "**"
+      - "!.github/**"
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    uses: chnm/.github/.github/workflows/hugo--build-release-deploy.yml@main
+    secrets: inherit
+    with:
+      container-registry: "ghcr.io"
+      container-image-name: "sustainabledh-website"
+      hugo-context-root: "."
+      hugo-devl-url: "https://sustainabledh.org"
+      hugo-prod-url: "https://sustainabledh.org"
+
+      build-artifact-name: "sustainabledh-website"
+      release-tag-name-type: "iso"
+
+      hugo-devl-url: "https://sustainabledh.org"
+      hugo-prod-url: "https://sustainabledh.org"
+
