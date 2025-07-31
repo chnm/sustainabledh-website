@@ -3,6 +3,7 @@ FROM floryn90/hugo:0.148.2 AS build-stage
 ARG hugobuildargs
 ENV HUGO_BUILD_ARGS=${hugobuildargs}
 
+USER root
 WORKDIR /app
 ADD . .
 
