@@ -1,6 +1,6 @@
 +++
 title = 'Building Static Search'
-date = '2025-08-18T13:29:07-05:00'
+date = '2025-08-20T10:29:07-05:00'
 author = 'Jason Heppler'
 description = ''
 tags = ['omeka', 'wordpress', 'drupal', 'static search']
