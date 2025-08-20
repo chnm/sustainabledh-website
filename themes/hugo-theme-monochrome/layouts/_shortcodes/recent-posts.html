@@ -1,6 +1,6 @@
 {{ $sortby := .Get "sortby" }}
 {{ $limit := int (.Get "limit") }}
-{{ $pages := .Site.RegularPages }}
+{{ $pages := where .Site.RegularPages "Section" "blog" }}
 
 {{- if $pages -}}
 {{- if eq $sortby "publishDate" -}}
