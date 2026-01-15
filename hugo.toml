@@ -1,6 +1,6 @@
 baseURL = 'https://sustainabledh.org/'
 languageCode = 'en-us'
-title = 'Sustainble DH'
+title = 'Sustainable DH'
 theme = "hugo-theme-monochrome"
 
 [params]
