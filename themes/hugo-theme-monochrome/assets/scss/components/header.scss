@@ -81,6 +81,12 @@ header {
           display: flex;
         }
 
+        #sidebar_btn_input:focus-visible + #sidebar_btn_label {
+          outline: 2px solid var(--color-text);
+          outline-offset: 2px;
+          border-radius: 3px;
+        }
+
         @media screen and (min-width: $lg_min_width) {
           display: none;
         }
@@ -225,8 +231,9 @@ header {
     z-index: 20;
     background-color: var(--color-background);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s;
+    transition: transform 0.2s, visibility 0.2s;
     transform: translateX(-100%);
+    visibility: hidden;
     overflow-y: auto;
     width: 60%;
     padding: 1.2rem;
@@ -263,7 +270,7 @@ header {
   }
 
   #sidebar_btn_input:checked ~ #sidebar {
-    display: block;
     transform: translateX(0);
+    visibility: visible;
   }
 }

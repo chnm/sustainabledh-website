@@ -43,3 +43,7 @@ tag = "tags"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+[markup.highlight]
+  noClasses = false
+  style = "monokai"

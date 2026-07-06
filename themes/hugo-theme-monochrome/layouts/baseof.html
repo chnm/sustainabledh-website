@@ -21,9 +21,10 @@
 <html lang='{{ .Site.LanguageCode }}'>
     {{- partial "head.html" . -}}
     <body>
+        <a class="skip-link" href="#content">{{ i18n "skip_to_content" }}</a>
         {{- partial "header.html" . -}}
         <main>
-            <div id="content" class="content-margin">
+            <div id="content" class="content-margin" tabindex="-1">
                 {{ if .Params.changelogs }}
                     {{ $enable_collapsible_changelogs := (.Scratch.Get "params").enable_collapsible_changelogs }}
                     {{ partial "collapsible-menu.html" (dict "type" "changelogs" "context" . "enable" $enable_collapsible_changelogs) }}

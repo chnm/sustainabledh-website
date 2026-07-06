@@ -2,14 +2,14 @@
     <div id="header_content">
         <div id="header_left">
             <div id="sidebar_btn">
-                <input type="checkbox" id="sidebar_btn_input" class="hidden" />
+                <input type="checkbox" id="sidebar_btn_input" class="visually-hidden" aria-label="{{ i18n "toggle_navigation_menu" }}" />
                 <label id="sidebar_btn_label" for="sidebar_btn_input">
                     {{- partial "svg/feather.html" (dict "name" "menu") -}}
                 </label>
                 <label id="sidebar_canvas_overlay_wrapper" for="sidebar_btn_input">
                     <div id="sidebar_canvas_overlay"></div>
                 </label>
-                <div id="sidebar">
+                <nav id="sidebar" aria-label="{{ i18n "mobile_navigation" }}">
                     <ul>
                         {{- range .Site.Menus.navbar -}}
                             <li>
@@ -26,7 +26,7 @@
                             </li>
                         {{- end -}}
                     </ul>
-                </div>
+                </nav>
             </div>
         
             <div class="brand">

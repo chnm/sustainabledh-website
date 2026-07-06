@@ -24,3 +24,8 @@ Recent alumni:
 - God's Will Katchoua, Systems Administrator, 2019-2022
 - Dana Meyer, Graduate Research Assistant, 2020
 - Kris Stinson, Graduate Research Assistant, 2020
+
+## Contact 
+Contact us at [chnm@gmu.edu](mailto:chnm@gmu.edu).
+
+RRCHNM is committed to accessibility. If you have an accessibility issue, report it [here](https://rrchnm.org/accessibility/).

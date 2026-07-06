@@ -1,0 +1,12 @@
+{{- $lang := .Type | lower -}}
+{{- /* Build options string from code-fence attributes (e.g. {linenos=inline}) */ -}}
+{{- $opts := slice -}}
+{{- range $k, $v := .Options -}}
+  {{- $opts = $opts | append (printf "%s=%v" $k $v) -}}
+{{- end -}}
+{{- $highlighted := transform.Highlight .Inner $lang (delimit $opts ",") -}}
+{{- if $lang -}}
+  {{- /* Mirror language-{lang} onto <pre> so AT identifies the language at the container level */ -}}
+  {{- $highlighted = $highlighted | strings.ReplaceRE `class="chroma"` (printf `class="chroma language-%s"` $lang) -}}
+{{- end -}}
+{{ $highlighted | safeHTML }}

@@ -1,0 +1,4 @@
+{{- $href := .Get "href" -}}
+{{- $text := .Get "text" -}}
+{{- $name := .Get "name" -}}
+<a href="{{ $href }}">{{ $text }}<span class="visually-hidden"> of {{ $name }}</span></a>

@@ -19,8 +19,9 @@
         {{ range .AlternativeOutputFormats -}}
             {{ if eq .MediaType.Type "application/rss+xml" }}
                 <div class="icon">
-                    <a rel="noopener" target="_blank" href="{{ .Permalink | safeURL }}"> 
-                        {{ partial "svg/feather.html" (dict "name" "rss") }}
+                    <a rel="noopener" target="_blank" href="{{ .Permalink | safeURL }}"
+                       aria-label="{{ i18n "rss_feed_for" (dict "Title" $.Title) }}">
+                        {{- partial "svg/feather.html" (dict "name" "rss" "aria_hidden" true) -}}
                     </a>
                 </div>
             {{ end }}

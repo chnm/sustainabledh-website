@@ -5,3 +5,12 @@
 "resources_not_found" = 'Ressources introuvables. Vous devez spécifier « {{ .resources_name }} » correctement.'
 "search" = "Rechercher des articles"
 "changelogs" = "Notes de version"
+"permalink_to" = "Lien permanent vers {{ .Heading }}"
+"rss_feed_for" = "Flux RSS pour {{ .Title }}, s'ouvre dans un nouvel onglet"
+"primary_navigation" = "Principale"
+"mobile_navigation" = "Mobile"
+"skip_to_content" = "Passer au contenu principal"
+"toggle_navigation_menu" = "Afficher/masquer le menu de navigation"
+"close_search" = "Fermer la recherche"
+"search_result_singular" = "résultat trouvé"
+"search_result_plural" = "résultats trouvés"

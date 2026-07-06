@@ -2,8 +2,8 @@
 {{ (printf "<!-- begin-chunk data-anchor=%q -->" .Anchor) | safeHTML }}
 {{ if (.Page.Scratch.Get "params").enable_header_anchor }}
 <h{{ .Level }} class="header-anchor-wrapper">{{ .Text | safeHTML }}
-  <a href="#{{ .Anchor | safeURL }}" class="header-anchor-link">
-    {{- partial "svg/feather.html" (dict "name" "hash" "width" "1rem" "height" "1rem") -}}
+  <a href="#{{ .Anchor | safeURL }}" class="header-anchor-link" aria-label="{{ i18n "permalink_to" (dict "Heading" .PlainText) }}">
+    {{- partial "svg/feather.html" (dict "name" "hash" "width" "1rem" "height" "1rem" "aria_hidden" true) -}}
   </a>
 </h{{ .Level }}>
 {{ else }}
