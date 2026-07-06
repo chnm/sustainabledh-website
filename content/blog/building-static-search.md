@@ -20,13 +20,13 @@ That is phase two: building the search index. This process takes the most amount
 
 We can take a closer look at one of the more complicated implementations that we did for [Children and Youth in History](https://cyh.rrchnm.org/index.html). CYH had three things we need to capture: the content, the type of content (case studies, teaching modules, primary sources, and website reviews), and categories. The content was simple enough: we had to look for anything that might refer to the main content area through a search that looked like this 
 
-```js {linenos=inline}
+```javascript {linenos=inline}
 const mainContent = $('#content, #primary, main, article').text() || $('body').text();
 ```
 
 Content types were a little more complicated; thankfully, however, `wget` captured these content types as directories. With that in mind, we used this structure to [assign categories](https://github.com/chnm/sustainability/blob/9a8f4bc377f9fb5849c7d3c215f5cd1f2177b0f7/cyh/update_search_index.js#L123) like so 
 
-```js
+```javascript
 let contentType = 'Other';
 // Is the directory "case-studies"? Then assign it Case Study, etc.
 if (relativePath.startsWith('case-studies/')) {
@@ -46,7 +46,7 @@ Tags were also a bit complicated, but usually contained in a list element on the
 
 Once these content areas were identified, we could return the results that would compile the `search_results.json` file: 
 
-```js
+```javascript
 return {
   title,
   content,

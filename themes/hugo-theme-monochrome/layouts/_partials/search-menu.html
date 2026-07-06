@@ -2,12 +2,16 @@
     <div id="search_menu">
         <div id="search_menu_toolbar">
             <div id="search_menu_input_wrapper">
+                <label for="search_menu_input" class="visually-hidden">{{ i18n "search" }}</label>
                 <input id="search_menu_input" type="text" placeholder='{{ i18n "search" }}'>
             </div>
-            <div id="search_menu_close_btn">
-                {{- partial "svg/feather.html" (dict "name" "x" "height" "1.25rem" "width" "1.25rem") -}}
-            </div>
+            <button id="search_menu_close_btn" type="button" aria-label="{{ i18n "close_search" }}">
+                {{- partial "svg/feather.html" (dict "name" "x" "height" "1.25rem" "width" "1.25rem" "aria_hidden" true) -}}
+            </button>
         </div>
+        <div id="search_menu_status" class="visually-hidden" role="status" aria-live="polite"
+             data-result-singular="{{ i18n "search_result_singular" }}"
+             data-result-plural="{{ i18n "search_result_plural" }}"></div>
         <div id="search_menu_results">
         </div>
     </div>

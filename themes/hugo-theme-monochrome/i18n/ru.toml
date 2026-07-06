@@ -5,3 +5,12 @@
 "resources_not_found" = 'Страница не найдена. Вам стоит указать "{{ .resources_name }}" правильно.'
 "search" = "Поиск по записям"
 "changelogs" = "Свод изменений"
+"permalink_to" = "Постоянная ссылка на {{ .Heading }}"
+"rss_feed_for" = "RSS-лента для {{ .Title }}, открывается в новой вкладке"
+"primary_navigation" = "Основная"
+"mobile_navigation" = "Мобильная"
+"skip_to_content" = "Перейти к основному содержанию"
+"toggle_navigation_menu" = "Открыть/закрыть меню навигации"
+"close_search" = "Закрыть поиск"
+"search_result_singular" = "результат найден"
+"search_result_plural" = "результатов найдено"

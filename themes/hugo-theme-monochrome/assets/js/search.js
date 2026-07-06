@@ -17,9 +17,11 @@ async function initIndex() {
     const search_menu_close_btn = document.getElementById("search_menu_close_btn");
     const search_menu_input = document.getElementById("search_menu_input");
     const search_menu_results = document.getElementById("search_menu_results");
+    const search_menu_status = document.getElementById("search_menu_status");
 
     search_menu_close_btn.addEventListener("click", function () {
         search_menu_wrapper.classList.add("hidden");
+        document.getElementById("search_btn").focus();
     });
 
     const data = await (await response).json();
@@ -161,6 +163,11 @@ async function initIndex() {
                 return acc + createItem(curr.title, curr.permalink, curr.content);
             }, "")
         }
+
+        const resultLabel = orderedMatches.length === 1
+            ? search_menu_status.dataset.resultSingular
+            : search_menu_status.dataset.resultPlural;
+        search_menu_status.textContent = `${orderedMatches.length} ${resultLabel}`;
     };
 
     search_menu_input.addEventListener("input", function () {
@@ -187,5 +194,12 @@ window.addEventListener("DOMContentLoaded", () => {
         search_menu_wrapper.classList.remove("hidden");
         search_menu_input.focus();
         initIndex();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !search_menu_wrapper.classList.contains("hidden")) {
+            search_menu_wrapper.classList.add("hidden");
+            search_btn.focus();
+        }
     });
 });
