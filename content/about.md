@@ -1,12 +1,7 @@
 +++
 date = '2025-07-28T14:20:56-05:00'
 title = 'About'
-zooming_js = false
 +++
-
-{{< breadcrumbs >}}
-
-# About
 
 This is a project of the Roy Rosenzweig Center for History and New Media. Sustainability efforts at the center are currently led by:
 
@@ -26,10 +21,8 @@ Recent alumni:
 - Dana Meyer, Graduate Research Assistant, 2020
 - Kris Stinson, Graduate Research Assistant, 2020
 
-## Contact 
+## Contact
+
 Contact us at [chnm@gmu.edu](mailto:chnm@gmu.edu).
 
 RRCHNM is committed to accessibility. If you have an accessibility issue, report it [here](https://rrchnm.org/accessibility/).
-
-{{< figure src="/images/gmu-logo.png" alt="George Mason University logo" class="footer-logo" link="https://www.gmu.edu/" >}}
-{{< figure src="/images/rrchnm-logo.png" alt="Roy Rosenzweig Center for History and New Media logo" class="footer-logo" link="https://rrchnm.org/" >}}

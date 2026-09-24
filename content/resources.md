@@ -3,10 +3,6 @@ date = '2025-07-28T14:20:48-05:00'
 title = 'Resources'
 +++
 
-{{< breadcrumbs >}}
-
-# Resources
-
 ## Projects
 
 [CollectionBuilder](https://collectionbuilder.github.io/) – static digital exhibits

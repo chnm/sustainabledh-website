@@ -4,10 +4,6 @@ title = 'Reusable Protocols'
 slug = '/reusable-protocols/'
 +++
 
-{{< breadcrumbs >}}
-
-# Reusable Protocols 
-
 Below you will find downloadable versions (most available in both .docx and .pdf) of RRCHNM’s sustainability protocols and documents, which can be reused as models in other contexts:
 
 - Sustainability Guide ( {{< doc-link href="/files/Sustainability-Guide.docx" text="docx" name="Sustainability Guide" >}} / {{< doc-link href="/files/Sustainability-Guide.pdf" text="pdf" name="Sustainability Guide" >}} )
