@@ -1,7 +1,7 @@
 +++
 title = 'Agents and APIs: Sustaining Projects by Rebuilding Them'
 date = '2026-09-21T10:00:00-05:00'
-author = 'Jason Heppler'
+authors = 'Jason Heppler'
 description = 'The best way to preserve an old database-driven website turns out to be not to scrape it at all.'
 tags = ['omeka', 'wordpress', 'drupal', 'agentic programming', 'engineering']
 categories = ['true stories']

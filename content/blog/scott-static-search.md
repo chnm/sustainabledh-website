@@ -1,7 +1,7 @@
 +++
 title = 'Adding a Static Search to Former CMS Sites'
 date = '2025-08-20T09:24:34-05:00'
-author = 'Savannah Scott'
+authors = 'Savannah Scott'
 description = 'Implementing static search on former content management system websites.'
 tags = ["omeka","drupal","wordpress","static search"]
 categories = []
