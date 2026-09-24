@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="wrap page">
+  <div class="page-body">
+    {{ partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    {{/* The index is generated after the Hugo build: pagefind --site public */}}
+    <div class="search-ui">
+      <pagefind-input instance="search"></pagefind-input>
+      <pagefind-summary instance="search"></pagefind-summary>
+      <pagefind-results instance="search"></pagefind-results>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="{{ "pagefind/pagefind-component-ui.css" | relURL }}">
+<script type="module" src="{{ "pagefind/pagefind-component-ui.js" | relURL }}"></script>
+{{ end }}

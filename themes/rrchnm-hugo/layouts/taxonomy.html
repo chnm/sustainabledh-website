@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="wrap page">
+  <div class="page-body">
+    {{ partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{ partial "terms-cloud.html" (dict "terms" .Data.Terms) }}
+  </div>
+</div>
+{{ end }}

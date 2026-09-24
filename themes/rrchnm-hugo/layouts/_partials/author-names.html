@@ -1,0 +1,7 @@
+{{/* Returns the page's author names as a list. Accepts `authors` (taxonomy) or
+     `author`, each as a string or a list. */}}
+{{ $names := slice }}
+{{ with .Params.authors | default .Params.author }}
+  {{ $names = cond (reflect.IsSlice .) . (slice .) }}
+{{ end }}
+{{ return $names }}

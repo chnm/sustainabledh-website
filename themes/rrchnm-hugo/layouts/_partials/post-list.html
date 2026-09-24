@@ -1,0 +1,9 @@
+<ul class="post-list">
+  {{ range . }}
+  <li>
+    <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+    {{ partial "post-meta.html" . }}
+    {{ with .Description | default .Summary }}<div class="post-summary">{{ . }}</div>{{ end }}
+  </li>
+  {{ end }}
+</ul>

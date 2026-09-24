@@ -1,0 +1,15 @@
+{{/* Font size scales with log(count) between 0.875rem and 1.6rem. */}}
+{{ $byCount := .terms.ByCount }}
+{{ with $byCount }}
+{{ $max := math.Log (add (index . 0).Count 1) }}
+{{ $min := math.Log (index . (sub (len .) 1)).Count }}
+<ul class="terms-cloud">
+  {{ range cond (eq $.sortby "alphabetical") $.terms.Alphabetical $byCount }}
+  {{ $weight := div (sub (math.Log .Count) $min) (sub $max $min) }}
+  <li>
+    <a href="{{ .Page.RelPermalink }}" style="font-size: {{ add 0.875 (mul 0.725 $weight) }}rem">{{ .Page.LinkTitle }}</a>
+    <span class="count">({{ .Count }})</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
