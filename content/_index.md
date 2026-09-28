@@ -1,5 +1,4 @@
 ---
-type: blank 
 ---
 
 # Building More Sustainable DH Projects
@@ -14,6 +13,4 @@ Welcome to Sustainable DH, a project of the [Roy Rosenzweig Center for History a
 ## Recent Posts
 
 {{< recent-posts sortby="lastMod" limit=5 >}}
-
-{{< terms-cloud terms="tags" sortby="alphabetical" >}}
 

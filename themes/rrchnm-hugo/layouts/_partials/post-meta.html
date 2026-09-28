@@ -1,0 +1,12 @@
+{{/* "By A", "By A and B", "By A, B, and C"; names link to /authors/ pages when they exist */}}
+{{ $names := partial "author-names.html" . }}
+{{ with $names }}
+<p class="post-meta">
+  By
+  {{- range $i, $name := . -}}
+    {{- if $i }}{{ if eq $i (sub (len $names) 1) }}{{ if gt (len $names) 2 }},{{ end }} and {{ else }}, {{ end }}{{ else }} {{ end -}}
+    {{- with site.GetPage (printf "/authors/%s" (urlize $name)) }}<a href="{{ .RelPermalink }}">{{ $name }}</a>{{ else }}{{ $name }}{{ end -}}
+  {{- end }}
+  &middot; <time datetime="{{ $.Date.Format "2006-01-02" }}">{{ $.Date | time.Format ":date_long" }}</time>
+</p>
+{{ end }}

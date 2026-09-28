@@ -1,7 +1,7 @@
 +++
 title = 'Podcasts and Sustainability'
 date = '2022-09-30T15:37:51-05:00'
-author = 'Megan Brett'
+authors = 'Megan Brett'
 description = ''
 tags = ['podcasts']
 toc = true

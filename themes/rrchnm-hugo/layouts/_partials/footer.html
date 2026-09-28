@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="wrap site-footer-inner">
+    <div>
+      <div class="footer-logos">
+        <a href="https://rrchnm.org"><img src="{{ "images/rrchnm-logo-light.png" | relURL }}" alt="Roy Rosenzweig Center for History and New Media" height="48"></a>
+        <a href="https://historyarthistory.gmu.edu/"><img class="gmu" src="{{ "images/gmu-logo-light.png" | relURL }}" alt="George Mason University Department of History and Art History" height="80"></a>
+      </div>
+      {{ with site.Params.footer }}<div class="footer-text">{{ . | markdownify }}</div>{{ end }}
+    </div>
+    {{ with site.Menus.footer }}
+    <nav aria-label="Footer">
+      <ul>
+        {{ range . }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+      </ul>
+    </nav>
+    {{ end }}
+  </div>
+  <div class="footer-bottom">
+    <p class="wrap">&copy; {{ with site.Params.copyright_start }}{{ . }}&ndash;{{ end }}{{ now.Year }} Roy Rosenzweig Center for History and New Media, George Mason University</p>
+  </div>
+</footer>

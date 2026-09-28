@@ -1,0 +1,15 @@
+{{ range $name, $taxonomy := site.Taxonomies }}
+{{ with $taxonomy }}
+<section class="taxonomy-panel">
+  <h2 class="label">{{ (site.GetPage $name).LinkTitle }}</h2>
+  <ul>
+    {{ range .Alphabetical }}
+    <li>
+      <a href="{{ .Page.RelPermalink }}"{{ if eq .Page.RelPermalink $.RelPermalink }} aria-current="page"{{ end }}>{{ .Page.LinkTitle }}</a>
+      <span class="count">{{ .Count }}</span>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

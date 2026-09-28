@@ -1,7 +1,7 @@
 +++
 title = 'Upgrading Antique Omeka Sites'
 date = '2022-09-02T15:06:37-05:00'
-author = 'Megan Brett'
+authors = 'Megan Brett'
 description = ''
 tags = ['omeka']
 categories = []

@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $authors := site.Taxonomies.authors }}
+{{ $tags := site.Taxonomies.tags }}
+<div class="wrap page{{ if or $authors $tags }} with-aside{{ end }}">
+  <article class="page-body prose" data-pagefind-body>
+    {{ .Content }}
+  </article>
+  {{ if or $authors $tags }}
+  <aside class="page-aside">
+    {{ with $authors }}
+    <section class="taxonomy-panel">
+      <h2 class="label">{{ (site.GetPage "/authors").LinkTitle }}</h2>
+      <ul>
+        {{ range .Alphabetical }}
+        <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a> <span class="count">{{ .Count }}</span></li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+    {{ with $tags }}
+    <section class="taxonomy-panel">
+      <h2 class="label">{{ (site.GetPage "/tags").LinkTitle }}</h2>
+      {{ partial "terms-cloud.html" (dict "terms" . "sortby" "alphabetical") }}
+    </section>
+    {{ end }}
+  </aside>
+  {{ end }}
+</div>
+{{ end }}

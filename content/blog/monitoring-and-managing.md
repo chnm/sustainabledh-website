@@ -1,7 +1,7 @@
 +++
 title = 'Monitoring And Managing A Collecting Project'
 date = '2022-11-18T15:39:07-05:00'
-author = 'Megan Brett'
+authors = 'Megan Brett'
 description = ''
 tags = ['omeka']
 categories = ['true stories']

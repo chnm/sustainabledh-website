@@ -14,12 +14,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  hugo-build-release-deploy:
     uses: chnm/.github/.github/workflows/hugo--build-release-deploy.yml@main
     secrets: inherit
     with:
-      container-registry: "ghcr.io"
-      container-image-name: "sustainabledh-website"
       hugo-context-root: "."
       hugo-devl-url: "https://sustainabledh.org"
       hugo-prod-url: "https://sustainabledh.org"

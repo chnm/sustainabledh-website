@@ -1,49 +1,50 @@
 baseURL = 'https://sustainabledh.org/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Sustainable DH'
-theme = "hugo-theme-monochrome"
+theme = 'rrchnm-hugo'
+pluralizeListTitles = false
 
 [params]
-footer = "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Cite as CC-BY-NC-SA 4.0 Roy Rosenzweig Center for History and New Media"
-enable_toc = true
-toc_position = "right"
-enable_collapsible_toc = false
-enable_collapsible_changelogs = false
-hide_navbar_on_scroll = true
-enable_site_search = true
+description = 'Documentation and resources for sustaining digital humanities projects, from the Roy Rosenzweig Center for History and New Media.'
+footer = 'This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Cite as CC-BY-NC-SA 4.0 Roy Rosenzweig Center for History and New Media.'
+matomo_site_id = 70
 
-[[menu.navbar]]
-identifier = "blog"
-name = "Blog"
-url = "/blog/"
-weight = 110
+[[menus.main]]
+name = 'Reusable Protocols'
+pageRef = '/protocols'
+weight = 10
 
-[[menu.navbar]]
-identifier = "about"
-name = "About"
-title = "about"
-url = "/about/"
-weight = 100
+[[menus.main]]
+name = 'Resources'
+pageRef = '/resources'
+weight = 20
 
-[[menu.navbar]]
-identifier = "resources"
-name = "Resources"
-url = "/resources/"
-weight = 70
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 30
 
-[[menu.navbar]]
-identifier = "protocols"
-name = "Reusable Protocols"
-url = "/reusable-protocols/"
-weight = 60
+[[menus.main]]
+name = 'Blog'
+pageRef = '/blog'
+weight = 40
+
+[[menus.footer]]
+name = 'About'
+pageRef = '/about'
+weight = 10
+
+[[menus.footer]]
+name = 'Blog Feed (RSS)'
+url = '/blog/index.xml'
+weight = 20
+
+[[menus.footer]]
+name = 'Accessibility'
+url = 'https://rrchnm.org/accessibility/'
+weight = 30
 
 [taxonomies]
-category = "categories"
-tag = "tags"
-
-[outputs]
-home = ["HTML", "RSS", "JSON"]
-
-[markup.highlight]
-  noClasses = false
-  style = "monokai"
+author = 'authors'
+category = 'categories'
+tag = 'tags'

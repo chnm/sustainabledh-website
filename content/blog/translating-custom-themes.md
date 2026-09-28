@@ -1,7 +1,7 @@
 +++
 title = 'Translating Custom Themes In A Twinned Omeka Site'
 date = '2022-12-02T15:42:47-05:00'
-author = 'Megan Brett'
+authors = 'Megan Brett'
 description = ''
 tags = ['omeka']
 categories = ['True Stories']

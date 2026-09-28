@@ -1,7 +1,7 @@
 +++
 title = 'Phasing Project Shutdown'
 date = '2022-11-21T15:40:37-05:00'
-author = 'Megan Brett'
+authors = 'Megan Brett'
 description = ''
 tags = ['WordPress']
 categories = ['True Stories']
