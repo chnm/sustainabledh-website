@@ -4,7 +4,7 @@
 # npx; this site has no npm dependencies.
 FROM stagex/pallet-nodejs AS build-stage
 
-COPY --from=stagex/user-hugo-extended:0.162.1 /usr/bin/hugo /usr/local/bin/hugo
+COPY --from=stagex/user-hugo-extended:0.161.1 /usr/bin/hugo /usr/local/bin/hugo
 
 # Timezone database for Hugo's time.* functions. stagex images ship no
 # zoneinfo, and this Hugo binary embeds none, so named zones (e.g.
