@@ -21,8 +21,7 @@ jobs:
       hugo-context-root: "."
       hugo-devl-url: "https://sustainabledh.org"
       hugo-prod-url: "https://sustainabledh.org"
-
-      build-artifact-name: "sustainabledh-website"
+      
       release-tag-name-type: "iso"
 
       website-devl-fqdn: "sustainabledh.org"
