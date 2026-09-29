@@ -17,17 +17,17 @@ weight = 10
 [[menus.main]]
 name = 'Resources'
 pageRef = '/resources'
-weight = 20
+weight = 30
 
 [[menus.main]]
 name = 'About'
 pageRef = '/about'
-weight = 30
+weight = 40
 
 [[menus.main]]
-name = 'Blog'
+name = 'True Stories'
 pageRef = '/blog'
-weight = 40
+weight = 20
 
 [[menus.footer]]
 name = 'About'
