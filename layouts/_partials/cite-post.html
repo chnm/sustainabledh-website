@@ -1,0 +1,53 @@
+{{/* Chicago-style "Cite this post" block, generated from front matter. */}}
+{{- $authors := .Params.authors | default slice -}}
+{{- if not (reflect.IsSlice $authors) }}{{ $authors = slice $authors }}{{ end -}}
+
+{{- /* First author is inverted (Last, First); the rest stay First Last. */ -}}
+{{- $names := slice -}}
+{{- range $i, $a := $authors -}}
+  {{- if eq $i 0 -}}
+    {{- $parts := split $a " " -}}
+    {{- $last := index $parts (sub (len $parts) 1) -}}
+    {{- $first := delimit (first (sub (len $parts) 1) $parts) " " -}}
+    {{- $names = $names | append (cond (eq $first "") $last (printf "%s, %s" $last $first)) -}}
+  {{- else -}}
+    {{- $names = $names | append $a -}}
+  {{- end -}}
+{{- end -}}
+{{- $byline := "" -}}
+{{- if eq (len $names) 1 }}{{ $byline = index $names 0 }}
+{{- else if eq (len $names) 2 }}{{ $byline = printf "%s, and %s" (index $names 0) (index $names 1) }}
+{{- else if gt (len $names) 2 }}{{ $byline = printf "%s, and %s" (delimit (first (sub (len $names) 1) $names) ", ") (index $names (sub (len $names) 1)) }}
+{{- end -}}
+
+{{- /* Double quotes inside the title become single quotes inside the citation's quotes. */ -}}
+{{- $title := replaceRE `"([^"]*)"` "‘$1’" .Title -}}
+{{- $title = cond (findRE `[.?!]$` $title) $title (printf "%s." $title) -}}
+
+<aside class="cite-post" data-pagefind-ignore aria-labelledby="cite-post-heading">
+  <div class="cite-post-head">
+    <h2 id="cite-post-heading" class="label">Cite this post</h2>
+    <button type="button" class="cite-post-copy" hidden>Copy</button>
+  </div>
+  <p class="cite-post-text">
+    {{- with $byline }}{{ . }}{{ if not (hasSuffix . ".") }}.{{ end }} {{ end -}}
+    “{{ $title }}” <em>{{ site.Title }}</em> (blog), Roy Rosenzweig Center for History and New Media, {{ .Date.Format "January 2, 2006" }}. {{ .Permalink -}}
+  </p>
+</aside>
+<script>
+  (() => {
+    const box = document.currentScript.previousElementSibling;
+    const btn = box.querySelector(".cite-post-copy");
+    if (!navigator.clipboard) return;
+    btn.hidden = false;
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(box.querySelector(".cite-post-text").textContent.trim());
+        btn.textContent = "Copied";
+      } catch {
+        btn.textContent = "Copy failed";
+      }
+      setTimeout(() => { btn.textContent = "Copy"; }, 2000);
+    });
+  })();
+</script>

@@ -61,3 +61,51 @@
     .nav-links li::after { transition: none; }
 }
 
+/* "Cite this post" block (see layouts/_partials/cite-post.html) */
+.cite-post {
+    margin-top: 3rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--red-brand);
+    background: var(--stone-50);
+}
+
+.cite-post-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.prose .cite-post h2 {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--stone-500);
+}
+
+.prose .cite-post-text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--stone-700);
+    overflow-wrap: anywhere;
+}
+
+.cite-post-copy {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--stone-300);
+    border-radius: var(--radius);
+    background: #fff;
+    color: var(--stone-700);
+    font: 500 0.8rem var(--font-sans);
+    cursor: pointer;
+}
+
+.cite-post-copy:hover {
+    border-color: var(--red-brand);
+    color: var(--red-brand);
+}
+
