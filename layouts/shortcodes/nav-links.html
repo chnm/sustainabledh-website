@@ -1,0 +1,4 @@
+{{/* Wraps a markdown list of "[Title](url) description" items and renders them as a divided link list. */}}
+<div class="nav-links">
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</div>

@@ -3,17 +3,17 @@ date = '2025-07-28T14:20:56-05:00'
 title = 'About'
 +++
 
-This is a project of the Roy Rosenzweig Center for History and New Media. Sustainability efforts at the center are currently led by:
+This is a project of the [Roy Rosenzweig Center for History and New Media](https://rrchnm.org) (RRCHNM). Sustainability efforts at the center are currently led by:
 
-- Jessica Otis, Director of Public Projects, 2018-present
+- Jessica Otis, Associate Director of RRCHNM, 2018-present
 - Nate Sleeter, Research Assistant Professor, 2021-present
-- Jason Heppler, Senior Developer-Scholar, 2021-present
-- Savannah Scott, Graduate Research Assistant, 2025-present
+- Jason Heppler, Senior Developer/Scholar, 2021-present
 - Tony Trinh, Systems Administrator, 2022-present
-- Misha Vinokur, Contractor, 2021-present
 
-Recent alumni:
+Alumni:
 
+- Savannah Scott, Graduate Research Assistant, 2025-2026
+- Misha Vinokur, Contractor, 2021-2024
 - Megan Brett, Digital History Associate, 2019-2022
 - Laura Crossley, Graduate Research Assistant, 2019
 - Amanda French, Contractor, 2019-2020
