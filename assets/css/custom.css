@@ -7,3 +7,57 @@
     height: 40px;
     width: auto;
 }
+
+/* Homepage section links (see layouts/shortcodes/nav-links.html) */
+.nav-links ul {
+    margin: 2.5rem 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--stone-200);
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0;
+    padding: 1.25rem 3rem 1.25rem 0;
+    border-bottom: 1px solid var(--stone-200);
+    color: var(--stone-600);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.nav-links li::after {
+    content: "\2192";
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    color: var(--stone-400);
+    font-size: 1.25rem;
+    transition: color 0.2s, right 0.2s;
+}
+
+.nav-links li a {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    color: var(--stone-900);
+    text-decoration: none;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.nav-links li:hover a,
+.nav-links li:hover::after { color: var(--red-brand); }
+
+.nav-links li:hover::after { right: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-links li::after { transition: none; }
+}
+
