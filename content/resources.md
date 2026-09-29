@@ -17,7 +17,7 @@ title = 'Resources'
 
 [The Socio-Technical Sustainability Roadmap](https://sites.haa.pitt.edu/sustainabilityroadmap/) – assessing and documenting your project for sustainability
 
-## Books and Articles
+## Articles
 
 Jessica Otis, “[Managing the Digital Backlist: Sustaining, Preserving, and Deleting Old Projects](https://jessicaotis.com/digital-humanities/managing-the-digital-backlist/
 ),” The Dev Log (blog), March 13, 2023. 

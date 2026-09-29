@@ -2,7 +2,7 @@
 title = '"The Most [Undecipherable] Difficulties": Sustaining and Transcribing the Papers of the War Department'
 date = '2026-09-28T10:00:00-05:00'
 authors = ['Jason Heppler', 'Jessica Otis']
-description = 'Using LLMs to transcribe historical documents.'
+description = ''
 tags = ['omeka', 'agentic programming', 'engineering']
 categories = ['true stories']
 toc = true
