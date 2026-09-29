@@ -109,3 +109,13 @@
     color: var(--red-brand);
 }
 
+/* Keep breadcrumbs on one line; truncate the current page's title with an ellipsis. */
+.breadcrumbs ol { flex-wrap: nowrap; }
+.breadcrumbs li { flex-shrink: 0; white-space: nowrap; }
+.breadcrumbs li:last-child {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

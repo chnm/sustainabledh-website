@@ -1,0 +1,12 @@
+{{/* Overrides the theme partial to shorten long current-page titles at a word boundary. */}}
+{{ if not .IsHome }}
+<nav class="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
+  <ol>
+    {{ range .Ancestors.Reverse }}
+    <li><a href="{{ .RelPermalink }}">{{ if .IsHome }}Home{{ else }}{{ .LinkTitle }}{{ end }}</a></li>
+    {{ end }}
+    {{ $short := truncate 58 .LinkTitle | htmlUnescape | replaceRE `[\s:;,.–—-]+…$` "…" }}
+    <li><a href="{{ .RelPermalink }}" aria-current="page"{{ if ne $short .LinkTitle }} title="{{ .LinkTitle }}"{{ end }}>{{ $short }}</a></li>
+  </ol>
+</nav>
+{{ end }}
