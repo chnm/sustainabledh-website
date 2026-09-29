@@ -26,6 +26,20 @@
     line-height: 1.6;
 }
 
+/* Short brand-red segment on each row's top divider; stretches on hover. */
+.nav-links li::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 2rem;
+    height: 3px;
+    background: var(--red-brand);
+    transition: width 0.25s;
+}
+
+.nav-links li:hover::before { width: 4rem; }
+
 .nav-links li::after {
     content: "\2192";
     position: absolute;
@@ -58,6 +72,7 @@
 .nav-links li:hover::after { right: 0; }
 
 @media (prefers-reduced-motion: reduce) {
+    .nav-links li::before,
     .nav-links li::after { transition: none; }
 }
 
