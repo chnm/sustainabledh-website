@@ -1,0 +1,22 @@
+{{/* One downloadable protocol: title="…" plus any of docx/pdf/xlsx="/files/…"; inner text is the description. */}}
+{{- $title := .Get "title" -}}
+<li class="protocol">
+  <div class="protocol-text">
+    <h2 class="protocol-title">{{ $title }}</h2>
+    {{ with trim .Inner " \n" }}<p>{{ . | $.Page.RenderString }}</p>{{ end }}
+  </div>
+  <div class="protocol-files">
+    {{- range slice "docx" "pdf" "xlsx" }}
+    {{- with $.Get . }}
+    {{- $size := "" }}
+    {{- $path := printf "static%s" . }}
+    {{- if fileExists $path }}{{ $size = (os.Stat $path).Size }}{{ end }}
+    <a class="protocol-file" href="{{ . }}" download>
+      <span class="protocol-format">{{ upper (path.Ext . | strings.TrimPrefix ".") }}</span>
+      {{- with $size }}<span class="protocol-size">{{ if ge . 1048576 }}{{ lang.FormatNumber 1 (div (float .) 1048576) }} MB{{ else }}{{ math.Ceil (div (float .) 1024) }} KB{{ end }}</span>{{ end -}}
+      <span class="visually-hidden"> of {{ $title }}</span>
+    </a>
+    {{- end }}
+    {{- end }}
+  </div>
+</li>
