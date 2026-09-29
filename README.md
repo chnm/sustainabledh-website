@@ -60,7 +60,7 @@ Put images for a post in the same folder as its `index.md`.
 
 ### Downloadable files
 
-Protocol documents and other downloads go in `static/files/` and are served from `/files/…`.
+Protocol documents and other downloads go in `static/files/` and are served from `/files/...`.
 
 ## Theme and customization
 
@@ -72,7 +72,3 @@ Prefer customizing this site without editing the theme:
 - **Templates:** copy a theme template to the same path under `layouts/` and edit the copy. Hugo uses the site's version instead of the theme's.
 - **Shortcodes:** site-specific shortcodes live in `layouts/shortcodes/`.
 - **Navigation, footer links, and taxonomies** are configured in `hugo.toml`.
-
-## Deployment
-
-Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/cicd.yml`. It calls RRCHNM's shared Hugo build-and-deploy workflow, which builds the `Dockerfile` (Hugo and Pagefind, served by Caddy) and deploys it to sustainabledh.org. Work on a branch and open a pull request; merging to `main` publishes.
