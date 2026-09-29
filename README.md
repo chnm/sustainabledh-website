@@ -76,7 +76,3 @@ Prefer customizing this site without editing the theme:
 ## Deployment
 
 Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/cicd.yml`. It calls RRCHNM's shared Hugo build-and-deploy workflow, which builds the `Dockerfile` (Hugo and Pagefind, served by Caddy) and deploys it to sustainabledh.org. Work on a branch and open a pull request; merging to `main` publishes.
-
-## License
-
-Site content is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Cite as CC-BY-NC-SA 4.0 Roy Rosenzweig Center for History and New Media.
